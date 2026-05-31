@@ -1,0 +1,101 @@
+package com.example.ui
+
+object Translations {
+    private val en = mapOf(
+        "app_title" to "Pedarat AI",
+        "chat_tab" to "Chat",
+        "agents_tab" to "Agents",
+        "history_tab" to "History",
+        "settings_tab" to "Settings",
+        "select_agent" to "Select Agent",
+        "type_message" to "Type a message...",
+        "send" to "Send",
+        "saving" to "Saving...",
+        "settings_title" to "Settings",
+        "api_key_label" to "llm7.io API Key",
+        "api_key_placeholder" to "Enter API key",
+        "base_url_label" to "API Base URL",
+        "language_label" to "Language / زبان",
+        "theme_label" to "Material Theme",
+        "theme_dark" to "Dark Mode",
+        "theme_white" to "Clean Light",
+        "theme_colorful" to "Vibrant Color",
+        "persian" to "Persian (فارسی)",
+        "english" to "English",
+        "back" to "Back",
+        "generate" to "Generate",
+        "generating" to "Generating image...",
+        "prompt_placeholder" to "Describe what you want to generate...",
+        "save_success" to "Success!",
+        "export_history" to "Export History",
+        "copied" to "Copied to clipboard!",
+        "delete_session" to "Delete Session",
+        "no_sessions" to "No saved conversations",
+        "free_agents" to "Free Agents",
+        "text_agents" to "Text Agents",
+        "image_agents" to "Image Agents",
+        "model_error" to "API Error or Invalid API Key. Please verify settings.",
+        "input_required" to "Please enter some text",
+        "image_url_view" to "Generated Image",
+        "copy_code" to "Copy Code",
+        "export_txt" to "Share as Markdown File",
+        "history_exported" to "History shared successfully",
+        "chat_hint" to "Ask me anything...",
+        "no_key_warning" to "Please enter your llm7.io API key in Settings first!",
+        "new_chat" to "New Session",
+        "untitled_chat" to "Untitled Chat"
+    )
+
+    private val fa = mapOf(
+        "app_title" to "هوش مصنوعی پدرت",
+        "chat_tab" to "گفتگو",
+        "agents_tab" to "عوامل",
+        "history_tab" to "تاریخچه",
+        "settings_tab" to "تنظیمات",
+        "select_agent" to "انتخاب عامل",
+        "type_message" to "پیامی بنویسید...",
+        "send" to "ارسال",
+        "saving" to "در حال ذخیره‌سازی...",
+        "settings_title" to "تنظیمات",
+        "api_key_label" to "کلید API سایت llm7.io",
+        "api_key_placeholder" to "کلید API را وارد کنید",
+        "base_url_label" to "آدرس پایه API",
+        "language_label" to "زبان / Language",
+        "theme_label" to "پوسته متریال",
+        "theme_dark" to "حالت تاریک",
+        "theme_white" to "سفید تمیز",
+        "theme_colorful" to "رنگی پرانرژی",
+        "persian" to "فارسی",
+        "english" to "انگلیسی",
+        "back" to "بازگشت",
+        "generate" to "تولید تصویر",
+        "generating" to "در حال تولید تصویر...",
+        "prompt_placeholder" to "تصویر مد نظر خود را توصیف کنید...",
+        "save_success" to "با موفقیت ذخیره شد!",
+        "export_history" to "خروجی گرفتن از گفتگو",
+        "copied" to "در حافظه کپی شد!",
+        "delete_session" to "حذف گفتگو",
+        "no_sessions" to "هیچ گفتگوی ذخیره شده‌ای وجود ندارد",
+        "free_agents" to "عوامل رایگان",
+        "text_agents" to "عوامل متنی",
+        "image_agents" to "عوامل تصویری",
+        "model_error" to "خطای API یا کلید گمشده. لطفاً تنظیمات را بررسی کنید.",
+        "input_required" to "لطفاً بنویسید",
+        "image_url_view" to "تصویر تولید شده",
+        "copy_code" to "کپی کد",
+        "export_txt" to "اشتراک‌گذاری به عنوان فایل مارک‌داون",
+        "history_exported" to "اشتراک‌گذاری با موفقیت صورت گرفت",
+        "chat_hint" to "هر چیزی می‌خواهی از من بپرس...",
+        "no_key_warning" to "لطفاً ابتدا کلید API خود را در تنظیمات وارد کنید!",
+        "new_chat" to "گفتگوی جدید",
+        "untitled_chat" to "شناسه گفتگو بی‌نام"
+    )
+
+    fun getString(key: String, lang: String): String {
+        return if (lang == "fa") {
+            fa[key] ?: en[key] ?: key
+        } else {
+            en[key] ?: key
+        }
+    }
+}
